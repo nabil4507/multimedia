@@ -37,28 +37,37 @@
       margin: 20px 0;
     }
 
-    /* Course blocks */
-    .course {
+    /* Card styles */
+    .course-card {
+      display: flex;
+      flex-direction: column;
       background-color: #073642;
-      padding: 30px;
-      margin-bottom: 40px;
+      padding: 20px;
       border-radius: 15px;
       border: 2px solid #586E75;
     }
 
-    .course h3 {
-      margin-bottom: 15px;
+    .course-card h3 {
+      margin-bottom: 10px;
       color: #93A1A1;
-      font-size: 28px;
+      font-size: 24px;
     }
 
-    .course p {
-      margin-bottom: 25px;
+    .course-card p {
+      margin-bottom: 15px;
       color: #839496;
     }
 
-    /* Call-to-action button */
-    .cta-button {
+    .course-card ul {
+      margin-bottom: 20px;
+    }
+
+    .course-card li {
+      color: #839496;
+    }
+
+    .course-card .cta-button {
+      align-self: flex-end;
       display: inline-block;
       padding: 12px 24px;
       background-color: #268BD2;
@@ -69,70 +78,93 @@
       transition: background-color 0.3s;
     }
 
-    .cta-button:hover {
+    .course-card .cta-button:hover {
       background-color: #005E70;
     }
 
-    /* Add additional styling as needed for responsiveness and aesthetics */
+    /* Grid layout for cards */
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      margin-top: 20px;
+    }
+
+    /* Additional styling for responsiveness and aesthetics as needed */
   </style>
 </head>
 <body>
-  <!--Still in Drafting Process-->
-    <header>
+  <header>
     <h1>PADI Diving Courses</h1>
   </header>
   
-  <section class="course">
-    <h3>PADI Open Water Diver Certification</h3>
-    <p>Embark on an underwater journey and become a certified diver with the PADI Open Water Diver Certification course...</p>
-    <h2>Course Highlights</h2>
-    <ul>
-      <li>Master the fundamental principles of scuba diving</li>
-      <li>Develop crucial dive skills through hands-on confined water training</li>
-      <li>Explore captivating open water environments guided by experienced instructors</li>
-      <li>Gain in-depth knowledge of dive equipment and its practical application</li>
-      <li>Plan and execute safe and exhilarating dives with confidence</li>
-      <li>Earn an internationally recognized certification allowing dives up to 18 meters (60 feet)</li>
-    </ul>
-    <h2>Course Duration</h2>
-    <p>The course spans 3-4 days, encompassing knowledge development sessions, confined water dives, and open water exploration.</p>
-    <h2>Course Cost</h2>
-    <div class="package">
-      <h3>Standard Package: $400</h3>
+  <div class="course-grid">
+    <div class="course-card">
+      <img src="course1.jpg" alt="PADI Open Water Diver">
+      <h3>PADI Open Water Diver Certification</h3>
+      <p>Embark on an underwater journey and become a certified diver with the PADI Open Water Diver Certification course...</p>
       <ul>
-        <li>Course materials (manual and dive tables)</li>
-        <li>Confined water training sessions</li>
-        <li>Open water dives</li>
-        <li>Rental of basic scuba equipment</li>
-        <li>PADI Open Water Diver certification upon successful completion</li>
+        <!-- Course highlights here -->
       </ul>
+      <p class="price">Price: RM 1,500</p>
+      <a href="#" class="cta-button">Enroll Now</a>
     </div>
-    <div class="package">
-      <h3>Deluxe Package: $550</h3>
-      <ul>
-        <li>All features of the Standard Package</li>
-        <li>Additional guided open water dives for enhanced underwater skills</li>
-        <li>Upgraded equipment rental options</li>
-      </ul>
-    </div>
-    <h2>Prerequisites</h2>
-    <ul>
-      <li>Minimum age: 10 years</li>
-      <li>Good physical health (medical questionnaire provided)</li>
-      <li>Basic swimming skills</li>
-    </ul>
-    <h2>Why Choose Our PADI Open Water Diver Course</h2>
-    <ul>
-      <li>Experienced and certified PADI instructors</li>
-      <li>Comprehensive training prioritizing safety and skill development</li>
-      <li>Flexible scheduling to accommodate your availability</li>
-      <li>High-quality equipment ensuring a comfortable and enjoyable diving experience</li>
-      <li>Globally recognized certification unlocking diving opportunities worldwide</li>
-    </ul>
-    <a href="#" class="cta-button">Enroll Now</a>
-  </section>
 
-  <!-- Repeat for other courses -->
+    <div class="course-card">
+      <img src="course2.jpg" alt="PADI Advanced Open Water Diver">
+      <h3>PADI Advanced Open Water Diver Certification</h3>
+      <p>Take your diving skills to the next level with the PADI Advanced Open Water Diver Certification course...</p>
+      <ul>
+        <!-- Course highlights here -->
+      </ul>
+      <p class="price">Price: RM 1,800</p>
+      <a href="#" class="cta-button">Enroll Now</a>
+    </div>
+
+    <div class="course-card">
+      <img src="course3.jpg" alt="PADI Rescue Diver">
+      <h3>PADI Rescue Diver Certification</h3>
+      <p>Learn to prevent and manage dive emergencies, making you a more capable and confident diver with the PADI Rescue Diver course...</p>
+      <ul>
+        <!-- Course highlights here -->
+      </ul>
+      <p class="price">Price: RM 2,200</p>
+      <a href="#" class="cta-button">Enroll Now</a>
+    </div>
+
+    <div class="course-card">
+      <img src="course4.jpg" alt="PADI Enriched Air Diver">
+      <h3>PADI Enriched Air Diver Certification</h3>
+      <p>Dive with longer no-decompression limits and more bottom time by learning to use enriched air nitrox with the PADI Enriched Air Diver course...</p>
+      <ul>
+        <!-- Course highlights here -->
+      </ul>
+      <p class="price">Price: RM 800</p>
+      <a href="#" class="cta-button">Enroll Now</a>
+    </div>
+
+    <div class="course-card">
+      <img src="course5.jpg" alt="PADI Underwater Photographer">
+      <h3>PADI Underwater Photographer Course</h3>
+      <p>Capture the beauty of the underwater world with your camera by learning essential techniques and skills in the PADI Underwater Photographer course...</p>
+      <ul>
+        <!-- Course highlights here -->
+      </ul>
+      <p class="price">Price: RM 1,300</p>
+      <a href="#" class="cta-button">Enroll Now</a>
+    </div>
+
+    <div class="course-card">
+      <img src="course6.jpg" alt="PADI Divemaster">
+      <h3>PADI Divemaster Certification</h3>
+      <p>Take the first step in your professional diving career by becoming a PADI Divemaster, leading and assisting in dive activities and training...</p>
+      <ul>
+        <!-- Course highlights here -->
+      </ul>
+      <p class="price">Price: RM 3,500</p>
+      <a href="#" class="cta-button">Enroll Now</a>
+    </div>
+  </div>
 
   <footer>
     <p>Dive into a world of discovery with PADI Diving Courses. Contact us or visit our website for course information and enrollment!</p>
