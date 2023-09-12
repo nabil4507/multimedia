@@ -25,14 +25,9 @@
       align-items: center;
       background-color: #043BD4; /* Bright blue navbar */
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-      padding: 10px 30px;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #FF8800; /* Highlight color for contrast */
-      text-decoration: none;
+      padding: 0px 30px;
+      margin-bottom: -15px;
+      margin-top: -15px;
     }
 
     .navbar a {
@@ -41,6 +36,14 @@
       margin: 0 15px;
       font-weight: bold;
       transition: color 0.3s ease;
+      font-size: 18px;
+    }
+
+    .navbar img{
+    max-width: 10%;
+    max-height: 10%;
+    height: auto;
+    width: auto;
     }
 
     .navbar a:hover {
@@ -310,23 +313,24 @@
   margin: 20px 0;
 }
 
+
   </style>
 </head>
 <body>
   <nav class="navbar">
-    <a href="#" class="logo">Deep Blue Adventures</a>
+    <img src="Logo.png" alt="deepblue logo">
     <div>
-      <a href="#">Home</a>
-      <a href="#">Courses</a>
+      <a href="index-fixed.html">Home</a>
+      <a href="Course-page.html">Courses</a>
       <a href="#">About</a>
       <a href="#">Contact Us</a>
     </div>
   </nav>
 
   <header class="header">
-    <h1>Explore the Depths with PADI</h1>
+    <h1>Explore the Depths with PADI&reg; Certified Trainers</h1>
     <h2>Learn, Dive, Discover</h2>
-    <a href="#" class="header-button">Discover Courses</a>
+    <a href="Course-page.html" class="header-button">Discover Courses</a>
   </header>
 
   <!-- ... (Destination) ... -->
