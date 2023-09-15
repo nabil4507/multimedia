@@ -51,36 +51,77 @@
     }
 
     /* Header */
-    .header {
-      text-align: center;
-      background-image: url('path/to/header-image.jpg');
-      background-color: #001f3f; /* Deep blue background */
-      background-size: cover;
-      color: white;
-      padding: 150px 0;
-    }
+.header {
+  position: relative;
+  background-color: #001f3f; /* Deep blue background */
+  color: white;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  height: 100vh; /* Make the header take up the full viewport height */
+}
 
-    .header h1 {
-      font-size: 36px;
-      margin: 0;
-      margin-bottom: 20px;
-    }
+.header-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place the video behind the content */
+  overflow: hidden;
+}
 
-    .header h2 {
-      font-size: 24px;
-      margin: 0;
-      margin-bottom: 30px;
-    }
+.header-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
-    .header a {
-      display: inline-block;
-      background-color: #FF8800;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.header-content {
+  position: relative; /* Add this to make the content stack on top of the video */
+  text-align: center;
+  padding: 0;
+}
+
+.header-text {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+  padding: 50px; /* Adjust padding as needed */
+
+}
+
+.header h1 {
+  font-size: 36px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header h2 {
+  font-size: 24px;
+  margin: 0;
+  position: absolute;
+  top: 60%; /* Adjust the top position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white; /* Text color on top of video */
+}
+
+.header a {
+  display: inline-block;
+  background-color: #FF8800;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  position: absolute;
+  top: 70%; /* Adjust the top position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
 
     /* Header and Footer Styles */
     .footer {
@@ -133,7 +174,7 @@
     text-align: center;
     font-size: 28px;
     margin-bottom: 30px;
-    margin-top: 30px;
+    margin-top: 70px;
     position: relative;
     color: black;
 }
@@ -330,6 +371,9 @@
   </nav>
 
   <header class="header">
+    <video autoplay loop muted playsinline poster="Maison Kitsuné Summer Party - Seoul Video Report.mp4" class="header-video">
+      <source src="Maison Kitsuné Summer Party - Seoul Video Report.mp4" type="video/mp4">
+    </video>    
     <h1>Explore the Depths with PADI&reg; Certified Trainers</h1>
     <h2>Learn, Dive, Discover</h2>
     <a href="Course-page.html" class="header-button">Discover Courses</a>
@@ -444,7 +488,7 @@
   <!-- Testimonial Section -->
 <section class="testimonial">
   <div class="container">
-    <h2 class="section-title">Testimonial</h2>
+    <h2 class="section-title">Our Founder</h2>
     <div class="testimonial-item">
       <div class="testimonial-image">
         <img src="Testimony/Uniform-732x1030-1.jpg" alt="Testimonial Image">
