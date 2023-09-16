@@ -1,67 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - PADI Diving Instructor</title>
-  <style>
-    /* Include the same CSS styles as in the previous code */
-    body {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Include Roboto font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navigation header.css">
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif; /* Use Roboto font */
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* About section styles */
+        .about {
+            background-color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .about h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* Team section styles */
+        .team {
+            background-color: #f7f7f7;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .team h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+        .team-member h3 {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .team-member p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Footer styles */
+          .footer {
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          padding: 20px 0;
+          }
+
+    .footer p {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #001f3f;
     }
-
-    .navbar {
-      /* ... (navbar styles) ... */
-    }
-
-    .header {
-      /* ... (header styles) ... */
-    }
-
-    .product-card {
-      /* ... (product card styles) ... */
-    }
-
-    /* New CSS styles specific to the About page */
-    .about-content {
-      background-color: #E5E7E9;
-      padding: 40px;
-      text-align: center;
-    }
-
-    .about-title {
-      font-size: 30px;
-      color: #001f3f;
-      margin-bottom: 20px;
-    }
-
-    .about-description {
-      font-size: 18px;
-      color: #333;
-      line-height: 1.6;
-    }
-  </style>
+    </style>
 </head>
 <body>
   <nav class="navbar">
-    <!-- ... (navbar content) ... -->
+    <img src="Logo.png" alt="deepblue logo">
+    <div>
+      <a href="index.html">Home</a>
+      <a href="Course-page.html">Courses</a>
+      <a href="#">About</a>
+      <a href="#">Contact Us</a>
+    </div>
   </nav>
-  <header class="header">
-    <!-- ... (header content) ... -->
-  </header>
-  <section class="about-content">
-    <h2 class="about-title">About Us</h2>
-    <p class="about-description">
-      Welcome to PADI Diving Instructor, your premier destination for high-quality diving experiences and equipment. With a passion for exploring the underwater world, we are dedicated to providing top-notch diving instruction and exceptional diving gear to enthusiasts of all levels.
-    </p>
-    <p class="about-description">
-      Our team of experienced instructors is committed to ensuring your safety and enjoyment as you embark on your diving journey. We take pride in our rigorous training programs, designed to equip you with the skills and knowledge needed to explore the depths with confidence.
-    </p>
-    <p class="about-description">
-      Whether you're a beginner taking your first plunge or an experienced diver seeking advanced training, we have the courses and equipment to meet your needs. Join us in discovering the beauty and wonder of the underwater world.
-    </p>
-  </section>
+
+  </nav>
+    <section class="about">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec tincidunt mi, et interdum tellus. Duis eu mauris sit amet urna bibendum laoreet.</p>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="team-member1.jpg" alt="Team Member 1">
+                    <h3>John Doe</h3>
+                    <p>Co-Founder</p>
+                </div>
+                <div class="team-member">
+                    <img src="team-member2.jpg" alt="Team Member 2">
+                    <h3>Jane Smith</h3>
+                    <p>Designer</p>
+                </div>
+                <div class="team-member">
+                    <img src="team-member3.jpg" alt="Team Member 3">
+                    <h3>David Johnson</h3>
+                    <p>Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="team-member4.jpg" alt="Team Member 4">
+                    <h3>Sarah Lee</h3>
+                    <p>Marketing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Deep Blue Adventures&copy;. Member of PADI&reg; Community</p>
+      </div>
+    </footer>
 </body>
 </html>
