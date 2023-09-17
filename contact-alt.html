@@ -1,109 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us</title>
-  <style>
-    body {
-      background: #59ABE3;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Include Roboto font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navigation header.css">
+    <style>
+
+/* Reset some default styles */
+body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+/* Global styles */
+body {
+            font-family: 'Roboto', sans-serif; /* Use Roboto font */
+            background-color: #f7f7f7;
+            color: #333;
+        }
+    
+        
+/* Add some spacing and styling to the contact form */
+.contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        background-image: url('https://images.wallpaperscraft.com/image/single/sea_horizon_art_129961_800x600.jpg'); /* Replace with your image URL */
+        background-size: cover;
+        background-position: center;}
+
+    .contact-form {
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+        width: 400px;
+        text-align: center;
+    }
+
+    .contact-form h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .contact-form form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form label {
+        font-size: 18px;
+        text-align: left;
+        margin-bottom: 10px;
+        color: #555;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .contact-form input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        padding: 12px 24px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .contact-form input[type="submit"]:hover {
+        background-color: #555;
+    }
+
+    /* Style the footer text */
+    .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .footer p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    /* Style the footer text */
+    .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .footer p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+/* Footer styles */
+.footer {
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          padding: 20px 0;
+          }
+
+    .footer p {
       margin: 0;
     }
-    
-    .form {
-      width: 340px;
-      height: 440px;
-      background: #e6e6e6;
-      border-radius: 8px;
-      box-shadow: 0 0 40px -10px #000;
-      margin: calc(50vh - 220px) auto;
-      padding: 20px 30px;
-      max-width: calc(100vw - 40px);
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-      position: relative;
-    }
-    
-    h2 {
-      margin: 10px 0;
-      padding-bottom: 10px;
-      width: 180px;
-      color: #78788c;
-      border-bottom: 3px solid #78788c;
-    }
-    
-    input {
-      width: 100%;
-      padding: 10px;
-      box-sizing: border-box;
-      background: none;
-      outline: none;
-      resize: none;
-      border: 0;
-      font-family: 'Montserrat', sans-serif;
-      transition: all 0.3s;
-      border-bottom: 2px solid #bebed2;
-    }
-    
-    input:focus {
-      border-bottom: 2px solid #78788c;
-    }
-    
-    p:before {
-      content: attr(type);
-      display: block;
-      margin: 28px 0 0;
-      font-size: 14px;
-      color: #5a5a5a;
-    }
-    
-    button {
-      float: right;
-      padding: 8px 12px;
-      margin: 8px 0 0;
-      font-family: 'Montserrat', sans-serif;
-      border: 2px solid #78788c;
-      background: 0;
-      color: #5a5a6e;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    
-    button:hover {
-      background: #78788c;
-      color: #fff;
-    }
-    
-    div {
-      content: 'Hi';
-      position: absolute;
-      bottom: -15px;
-      right: -20px;
-      background: #50505a;
-      color: #fff;
-      width: 320px;
-      padding: 16px 4px 16px 0;
-      border-radius: 6px;
-      font-size: 13px;
-      box-shadow: 10px 10px 40px -14px #000;
-    }
-    
-    span {
-      margin: 0 5px 0 15px;
-    }
-  </style>
-</head>
-<body>
-  <form class="form">
-    <h2>CONTACT US</h2>
-    <p type="Name:"><input placeholder="Write your name here.."></p>
-    <p type="Email:"><input placeholder="Let us know how to contact you back.."></p>
-    <p type="Message:"><input placeholder="What would you like to tell us.."></p>
-    <button>Send Message</button>
-    <div>
-      <span class="fa fa-phone"></span>001 1023 567
-      <span class="fa fa-envelope-o"></span> contact@company.com
+    </style>
+    </head>
+    <body>
+      <nav class="navbar">
+        <img src="Logo.png" alt="deepblue logo">
+        <div>
+          <a href="index.html">Home</a>
+          <a href="Course-page.html">Courses</a>
+          <a href="about.html">About</a>
+          <a href="contact-alt.html">Contact Us</a>
+        </div>
+      </nav>
+
+      <div class="contact-container">
+        <div class="contact-form">
+            <!-- Contact form -->
+            <h1>Contact Us</h1>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" placeholder="Your Message"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </div>
-  </form>
-</body>
-</html>
+
+
+      
+      <footer class="footer">
+        <div class="container">
+          <p>Deep Blue Adventures&copy;. Member of PADI&reg; Community</p>
+        </div>
+      </footer>
+    </body>
